@@ -1,0 +1,42 @@
+{
+  "dataSource": "data/input.json",
+  "outputDir": "reports",
+  "updateFrequency": "daily",
+  "logLevel": "info",
+  "templatePath": "templates/report.hbs",
+  "sqlitePath": "cache.db",
+  "reportVersion": "1.0.0",
+  "api": {
+    "coingecko": {
+      "base_url": "https://api.coingecko.com/api/v3",
+      "request_timeout": 30
+    },
+    "helius": {
+      "base_url": "https://api.helius.xyz/v0"
+    },
+    "birdeye": {
+      "base_url": "https://public-api.birdeye.so"
+    }
+  },
+  "monitoring": {
+    "min_market_cap": 10000000,
+    "min_holding_duration_seconds": 5184000,
+    "update_interval": 3600,
+    "max_tokens": 200
+  },
+  "analysis": {
+    "volume_change_threshold": 0.20,
+    "good_swap_threshold": 0.15,
+    "min_analysis_market_cap": 1000000
+  },
+  "keywords": {
+    "ai": ["ai", "artificial intelligence", "machine learning", "ml", "neural", "gpt", "llm"],
+    "meme": ["meme", "pepe", "doge", "shib"]
+  },
+  "files": {
+    "holder_history": "holder_history.csv",
+    "token_monitor_log": "token_monitor.log",
+    "analysis_log": "token_analysis.log",
+    "holder_metrics": "holder_data_log.csv"
+  }
+}

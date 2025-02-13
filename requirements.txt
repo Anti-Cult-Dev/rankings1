@@ -1,0 +1,23 @@
+# Core dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+pathlib>=1.0.1
+
+# HTTP and networking
+urllib3>=2.0.0
+requests-retry-on-exceptions>=1.0.0
+
+# System monitoring
+psutil>=5.9.0
+
+# Logging and monitoring
+logging>=0.5.1.2
+
+# Testing and development
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
