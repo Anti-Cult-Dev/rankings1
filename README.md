@@ -1,105 +1,69 @@
-# Token Monitor
+# Solana Token Analytics Platform
 
-A production-ready system for monitoring and analyzing AI and meme tokens on the Solana blockchain.
+A comprehensive analytics platform for monitoring and analyzing Solana token holder data. This platform provides real-time tracking, analysis, and reporting of token holder statistics.
 
 ## Features
 
-- Real-time monitoring of AI and meme tokens
-- Long-term holder analysis
-- Volume and market cap tracking
-- Swap opportunity identification
-- Automated report generation
-- Continuous monitoring with auto-restart capability
-
-## Project Structure
-
-```
-token-monitor/
-├── config/                 # Configuration files
-│   ├── paths.py           # Path configurations
-│   ├── api_keys.py        # API keys and endpoints
-│   └── settings.py        # General settings
-├── data/                  # Data storage
-│   ├── raw/               # Raw data files
-│   └── processed/         # Processed data files
-├── logs/                  # Log files
-├── reports/               # Generated reports
-│   ├── analysis/          # Analysis reports
-│   ├── monitoring/        # Monitoring reports
-│   └── holder/           # Holder-related reports
-├── src/                   # Source code
-│   ├── monitors/         # Monitoring scripts
-│   └── analysis/         # Analysis scripts
-└── run_monitor.py        # Main launcher script
-```
+- Token holder tracking and analysis
+- Daily report generation
+- Anomaly detection
+- Health score calculation
+- Rate-limited data collection
+- Visualization generation
+- Historical data analysis
 
 ## Setup
 
-1. Create a virtual environment:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # Linux/Mac
-   # or
-   .venv\Scripts\activate     # Windows
-   ```
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd pystack1
+```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. Create a virtual environment and install dependencies:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-3. Configure API keys:
-   - Copy `.env.example` to `.env`
-   - Add your API keys for:
-     - CoinGecko Pro
-     - Helius
-     - Birdeye
+3. Create a `.env` file with your API keys and configuration:
+```
+COINGECKO_API_KEY=your_key_here
+COINMARKETCAP_API_KEY=your_key_here
+```
 
-4. Run the monitoring system:
-   ```bash
-   python run_monitor.py
-   ```
+4. Create necessary directories:
+```bash
+mkdir -p data/{holder_reports,archives,daily_reports/plots,cache,logs}
+```
 
-## Components
+5. Run the service:
+```bash
+PYTHONPATH=/path/to/project python src/main.py
+```
 
-### Token Monitor
-- Tracks AI and meme tokens on Solana
-- Filters by market cap and volume
-- Monitors holder counts and changes
+## Project Structure
 
-### Analysis Engine
-- Calculates volume and market cap rankings
-- Identifies swap opportunities
-- Generates entry/exit recommendations
-
-### Report Generation
-- Automated markdown report generation
-- Separate reports for different metrics
-- Time-stamped historical data
-
-## Configuration
-
-Key settings can be adjusted in `config/settings.py`:
-- Market cap and volume thresholds
-- Update intervals
-- Analysis weights
-- Target keywords
-
-## Logs
-
-Logs are stored in the `logs/` directory:
-- `token_monitor.log`: Monitoring events
-- `token_analysis.log`: Analysis events
-- `launcher.log`: System events
+- `src/`: Source code directory
+  - `analyzers/`: Analysis modules
+  - `trackers/`: Data tracking modules
+  - `utils/`: Utility functions
+- `data/`: Data storage
+  - `holder_reports/`: Current holder reports
+  - `archives/`: Historical data
+  - `daily_reports/`: Generated analysis reports
+  - `cache/`: Temporary data cache
+  - `logs/`: Application logs
 
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-MIT License - See LICENSE file for details 
+This project is licensed under the MIT License - see the LICENSE file for details. 

@@ -1,10 +1,8 @@
-# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -20,30 +18,16 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# Virtual Environment
-venv/
 .env
 .venv
+env/
+venv/
 ENV/
-
-# IDE
+env.bak/
+venv.bak/
 .idea/
 .vscode/
-*.swp
-*.swo
-.project
-.pydevproject
-
-# Logs and Data
-logs/
 *.log
-data/raw/
-data/processed/
-reports/
-
-# OS
-.DS_Store
-Thumbs.db
-
-node_modules/
+data/logs/
+data/cache/
+.DS_Store 
